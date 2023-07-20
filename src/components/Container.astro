@@ -1,0 +1,129 @@
+---
+import * as CONTENT from "../pages/content"
+import AccordionLayout from "../layouts/AccordionLayout.astro";
+import Card from "./Card.astro";
+---
+
+<ul class="shadow-box">
+  <AccordionLayout title={"About"} icon={"mdi:account-badge-outline"}>
+    {CONTENT.about}
+    <AccordionLayout title={"Work"} icon={"ic:baseline-work-outline"}>
+      {
+        CONTENT.work.map((item) => {
+          return (
+            <Card
+              title={item.role}
+              timeframe={`${item.from} - ${item.to}`}
+              description={item.location}
+              tags={item.skills}
+              url={item.org_url}
+              url_name={item.org}
+            />
+          );
+        })
+      }
+    </AccordionLayout>
+
+    <AccordionLayout title={"Projects"} icon={"ion:md-build"}>
+      {
+        CONTENT.projects.map((item) => {
+          return (
+            <Card
+              title={item.title}
+              timeframe="2022-2023"
+              description={item.description}
+              tags={item.tech}
+              url={item.url}
+              url_name={"Open Project"}
+            />
+          );
+        })
+      }
+    </AccordionLayout>
+
+    <AccordionLayout title={"Education"} icon={"carbon:education"}>
+      {
+        CONTENT.education.map((item) => {
+          return (
+            <Card
+              title={item.course}
+              timeframe={`${item.from} - ${item.to}`}
+              description={item.location}
+              tags={""}
+              url={"#"}
+              url_name={item.institute}
+            />
+          );
+        })
+      }
+    </AccordionLayout>
+
+    <AccordionLayout title={"Certifications"} icon={"carbon:certificate"}>
+      {
+        CONTENT.certificates.map((item) => {
+          return (
+            <Card
+              title={item.title}
+              timeframe={item.issued}
+              description={item.org}
+              tags={item.description}
+              url={item.url}
+              url_name={"View Certificate"}
+            />
+          );
+        })
+      }
+    </AccordionLayout>
+
+    <AccordionLayout title={"Blogs/Writings"} icon={"ic:round-edit-note"}>
+      {
+        CONTENT.blogs.map((item) => {
+          return (
+            <Card
+              title={item.title}
+              timeframe={item.date}
+              description={item.description}
+              tags=""
+              url={item.url}
+              url_name={item.publisher}
+            />
+          );
+        })
+      }
+    </AccordionLayout>
+
+    <AccordionLayout title={"Achievements"} icon={"mdi:trophy-award"}>
+      {
+        CONTENT.achievements.map((item) => {
+          return (
+            <Card
+              title={item.title}
+              timeframe={item.year}
+              description={item.decription}
+              tags=""
+              url="#"
+              url_name=""
+            />
+          );
+        })
+      }
+    </AccordionLayout>
+
+    <AccordionLayout title={"Contact"} icon={"ri:contacts-book-fill"}>
+      {
+        CONTENT.contact.map((item) => {
+          return (
+            <Card
+              title={""}
+              timeframe=""
+              description=""
+              tags=""
+              url={item.source}
+              url_name={item.source_name}
+            />
+          );
+        })
+      }
+    </AccordionLayout>
+  </AccordionLayout>
+</ul>

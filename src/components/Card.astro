@@ -1,0 +1,27 @@
+---
+import { Icon } from "astro-icon";
+const { timeframe, title, description, url, tags, url_name } = Astro.props
+---
+
+<div class="grid grid-cols-3 grid-rows-1 w-full p-2 place-items-center border-b-[1px] border-dashed py-8 border-text/25">
+    <div class="self-start justify-self-start">
+        <p class="text-text/50 text-base">
+            { timeframe }
+        </p>
+    </div>
+
+    <div class="self-start justify-self-start text-left">
+        <p class="text-lg text-text/80">{title}</p>
+        <p class="text-sm text-text/70">{description}</p>
+        <sub class="text-xs text-text/60">{tags}</sub>
+    </div>
+
+    <div class="self-start justify-self-end">
+        <a href={url} target="_blank" class="text-base text-right text-text/60 hover:text-text/80 flex justify-center items-center">
+            {url_name}
+            {
+               url !== "#" && <Icon name="icon-park-outline:unlink" class="w-4 h-4 ml-2" />
+            }
+        </a>
+    </div>
+</div>
