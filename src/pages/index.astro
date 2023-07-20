@@ -2,6 +2,7 @@
 import * as CONTENT from "./content"
 import Container from "../components/Container.astro";
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
@@ -26,9 +27,11 @@ import Header from "../components/Header.astro";
 				<div class="bg-blue-900 hover:scale-x-[2] w-full h-1.5" id="three"></div>
 		</article>
 
-		<main class="mx-auto flex-grow max-h-[70vh] max-w-3xl overflow-y-scroll grid gap-5 p-5 w-[95vw]">
+		<main class="mx-auto flex-grow max-h-[90vh] md:max-h-[70vh] max-w-3xl overflow-y-scroll grid gap-5 p-5 w-[95vw]">
 			<Container />
 		</main>
+
+		<Footer />
 	</body>
 </html>
 
@@ -37,6 +40,12 @@ import Header from "../components/Header.astro";
 	*{
 		transition: 350ms ease-in-out;
 		font-family: 'Manrope', sans-serif;
+	}
+
+	@media only screen and (max-width: 480px){
+		*{
+			font-size: 12px;
+		}
 	}
 
 	 /* For webkit-based browsers */

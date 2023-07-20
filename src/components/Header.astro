@@ -5,10 +5,10 @@ import * as CONTENT from "../pages/content"
 <!-- Hero section -->
 <header class="mx-auto py-8">
   <article
-    class="grid grid-cols-3 grid-rows-1 place-items-center w-[90vw] max-w-2xl"
+    class="grid grid-cols-3 grid-rows-1 place-items-center w-[98vw] max-w-2xl"
   >
     <div
-      class="rounded-full border-primary self-end shadow-2xl w-24 aspect-square"
+      class="rounded-full border-primary self-end shadow-2xl md:w-24 w-20 aspect-square"
     >
       <img
         src="/profile.jpg"
@@ -23,7 +23,7 @@ import * as CONTENT from "../pages/content"
       <h5 class="text-sm text-text/80">{CONTENT.location}</h5>
     </div>
 
-    <div class="grid text-right self-end">
+    <div class="md:grid text-right self-end hidden">
       <h6 class="text-sm text-text/70">{CONTENT.pronouns}</h6>
       <a
         href={CONTENT.website}
