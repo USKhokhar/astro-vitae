@@ -7,6 +7,7 @@ import Card from "./Card.astro";
 <ul class="shadow-box">
   <AccordionLayout title={"About"} icon={"mdi:account-badge-outline"}>
     {CONTENT.about}
+  </AccordionLayout>
     <AccordionLayout title={"Work"} icon={"ic:baseline-work-outline"}>
       {
         CONTENT.work.map((item) => {
@@ -125,5 +126,4 @@ import Card from "./Card.astro";
         })
       }
     </AccordionLayout>
-  </AccordionLayout>
 </ul>

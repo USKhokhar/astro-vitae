@@ -1,47 +1,97 @@
-# Astro Starter Kit: Minimal
+# Astro-Vitae | Personalized CV with minimal efforts
+
+![Astro-Vitae | Personalized CV with minimal efforts](public/screenshot.jpeg)
+
+Astro-Vitae is a free, personalized CV template with sleek & minimal design which helps in simplifying the process of getting a CV for yourself. So much so that someone with minimal knowledge of coding can easily get their CV just by updating their details.
+
+## Demo
+
+View a live demo of [Astro-Vitae](https://astro-vitae.vercel.app/)
+
+## Requirements
 
 ```
-npm create astro@latest -- --template minimal
+- Git & Github Account
+- NPM (Node Package Manager)
+- A text-editor
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## Installation
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+After cloning and setting up the project files on your local machine, run the following command in your terminal
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
+```bash
+npm install
 ```
-/
-├── public/
+
+Once the packages are installed you are ready to run astro. Astro comes with a built-in development server that has everything you need for project development. The astro dev command will start the local development server so that you can see your new website in action for the very first time.
+
+```bash
+npm run dev
+```
+
+## Tech Stack
+
+- [Astro](https://astro.build)
+- [TailwindCSS](https://tailwindcss.com/)
+- [AlpineJs](https://alpinejs.dev/)
+
+## Project Structure
+
+```php
 ├── src/
+│   ├── components/
+│   │   ├── Card.astro
+│   │   ├── Container.astro
+│   │   ├── Footer.astro
+│   │   └── Header.astro
+│   ├── layouts/
+│   │   └── AccordionLayout.astro
+│   │   └── BaseLayout.astro
 │   └── pages/
-│       └── index.astro
-└── package.json
+│   │   ├── content.js
+│   │   └── index.astro
+├── public/
+│   ├── favicon.svg
+│   └── profile.jpg
+│   └── screenshot.jpeg
+├── astro.config.mjs
+├── tailwind.config.cjs
+├── package.json
+├── README.md
+├── .gitignore
+└── tsconfig.json
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Using & Editing the content
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+In order to change the content of the CV, all you have to do is update it in the `content.js` file in `/src` folder.
 
-Any static assets, like images, can be placed in the `public/` directory.
+![Content Code](public/content_code.png)
 
-## 🧞 Commands
+In `src/content.js` all variables contain information that is to be reflected in the UI. In order to change it, simply update the values with your data. The personal information is fairly simple, content for the likes of work, projects, etc are stored as JavaScript objects.
 
-All commands are run from the root of the project, from a terminal:
+#### Adding or Removing a field
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:3000`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+To add or remove a field from the CV, simply go to `Container.astro` in `src/components/`
 
-## 👀 Want to learn more?
+![Accordion_code](public/accordion_code.png)
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- To Add a new field, add a new `<AccordionLayout />` component, with appropriate props and child component. Make sure add the data of field in proper format in `content.js`.
+- To Remove an already existing field, simply comment out the `<AccordionLayout />` component of that particular field or remove it. Removing its content from `content.js` is a choice.
+
+## Contributing
+
+Suggestions and pull requests are welcomed! Feel free to open a discussion or an [issue](https://github.com/uskhokhar/astro-vitae/issues) for a new feature request or bug.
+
+## License
+
+Astro-Vitae is licensed under the MIT license — see the [LICENSE](https://github.com/uskhokhar/astro-vitae/blob/main/LICENSE) file for details.
+
+## Contributors
+
+<a href="https://github.com/uskhokhar/astro-vitae/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=uskhokhar/astro-vitae" />
+</a>
+
+Happy Hecking 🙌 
