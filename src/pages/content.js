@@ -18,24 +18,6 @@ export const work = [
 		org_url: "https://quahog.gov/safety",
 		location: "Quahog, Rhode Island",
 		skills: "Safety Inspection, Risk Assessment, Emergency Response"
-	},
-	{
-		from: "2001",
-		to: "Present",
-		role: "Safety Inspector",
-		org: "Quahog Safety Department",
-		org_url: "https://quahog.gov/safety",
-		location: "Quahog, Rhode Island",
-		skills: "Safety Inspection, Risk Assessment, Emergency Response"
-	},
-	{
-		from: "2001",
-		to: "Present",
-		role: "Safety Inspector",
-		org: "Quahog Safety Department",
-		org_url: "https://quahog.gov/safety",
-		location: "Quahog, Rhode Island",
-		skills: "Safety Inspection, Risk Assessment, Emergency Response"
 	}
 ]
 
