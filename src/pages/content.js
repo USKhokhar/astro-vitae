@@ -24,18 +24,24 @@ export const work = [
 // Projects --> #project section
 export const projects = [
 	{
+		from: "2023",
+		to: "Present",
 		title: "Project Griffin",
 		description: "A project to improve safety standards in Quahog by implementing innovative safety measures.",
 		url: "https://projectgriffin.com",
 		tech: "Safety Equipment, Training Programs, Community Outreach",
 	},
 	{
+		from: "2023",
+		to: "2022",
 		title: "Family Safety Campaign",
 		description: "An initiative to promote safety awareness among families in Quahog.",
 		url: "https://safefamilyquahog.com",
 		tech: "Workshops, Educational Material, Public Events",
 	},
 	{
+		from: "2020",
+		to: "2021",
 		title: "Road Safety Initiative",
 		description: "A campaign to enhance road safety and reduce accidents in Quahog.",
 		url: "https://roadsafetyquahog.com",
